@@ -1,0 +1,24 @@
+
+// a, e, i, o, u, y
+
+ALGORITHM lenthOfSentences
+VAR
+    c : CHAR;
+    cc,cw,cv : INTEGER :=0;
+BEGIN
+    REPEAT
+        Write("Donner in char");
+        Read(c);
+    
+        cc := cc + 1;
+        IF (c = ' ') THEN
+            cw := cw + 1;
+        END_IF
+        IF (c = 'a') OR (c = 'e') OR (c = 'i') OR (c = 'o') OR (c = 'u')  OR (c = 'y') OR (c = 'A') OR (c = 'E') OR (c = 'I') OR (c = 'O') OR (c = 'U')  OR (c = 'Y')THEN
+            cv := cv + 1;
+        END_IF
+    
+    UNTIL (c := '.') 
+
+
+    END
