@@ -1,0 +1,27 @@
+FUNCTION produitscalaire(a,b : array of integer[]) : integer;
+VAR
+    sum : integer :=0 ; 
+BEGIN
+    FOR i FROM 1 TO a.length STEP 1  DO
+        sum:= sum + (a[i]*b[i]);    
+    END_FOR
+    RETURN sum ;
+END
+
+
+ALGORITHM vecteurs
+VAR   
+ t : ARRAY_OF INTEGER [] := [0,1];
+ v : ARRAY_OF INTEGER [] := [1,0];
+ result : INTEGER;
+BEGIN
+   IF (t.length <> v.length OR t.length>3 OR t.length<2) THEN
+    write=("error!!!");
+    ELSE 
+    result := produitscalaire(t,v);
+    IF (result=0) THEN 
+    write("ORTHO"); 
+    ELSE 
+    write("NOT ORTHO");
+   END_IF
+END
